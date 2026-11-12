@@ -1,0 +1,645 @@
+
+.subscribtion-tabs-wrapper .billing-address {
+    max-height: 0;
+    height: auto;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    margin-top: 12px;
+}
+.subscribtion-tabs-wrapper .billing-address.active {
+    height: auto;
+    max-height: 1000px;
+    opacity: 1;
+}
+.billing .disclaimer {
+    font-size: 0.7vw;
+    margin: 1vw 0 1vw;
+    color: #bcbcbc;
+}
+.enjoy p {
+    margin: 24px 0;
+}
+.enjoy .button {
+    float: none;
+}
+
+#promo-toggle{
+    text-decoration: underline;
+    color: #000;
+    text-transform: none;
+}
+.promo {
+    position: relative;
+}
+.promo input {
+    text-transform: uppercase;
+}
+.promo .button {
+    margin-right: 0;
+}
+
+.delivery > * {
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.delivery.existing > *, .delivery.address > * {
+    opacity: 0;
+    z-index: -1;
+}
+.delivery.existing .existing-wrapper, .delivery.address .address-wrapper {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: 10;
+    height: 500px;
+    padding: 24px;
+    width: 80%;
+}
+.existing-wrapper h5, .address-wrapper h5 {
+    margin-bottom: 12px;
+}
+.form .delivery .existing-wrapper .button, .form .delivery .address-wrapper .button {
+    float: none;
+    margin-right: 12px;
+    margin-top: 24px;
+    display: inline-block;
+}
+
+@media(max-width: 1200px) {
+    .main .right {
+        display: none;
+    }
+    .main .left {
+        width: 100%;
+    }
+    .half-wrapper {
+        max-width: none;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+@media(max-width: 440px) {
+    .pagination {
+        width: 100%;
+        padding: 0 12px;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+
+.subscribe-header h2 {
+    font-size: 5vw;
+    line-height: 5vw;
+    font-weight: 100;
+    margin-bottom: 1vw;
+    margin-top: 2vw;
+}
+.section-header.subscribe-header {
+    border-top: 0.3vw solid black;
+    padding-top: 4vw;
+    padding-bottom: 5vw;
+}
+.stepping-subscribe {
+    padding: 0.7vw 2vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    border: 0.1vw solid rgba(209, 209, 209, 1);
+    font-family: 'GT Standard L Heavy', sans-serif;
+    letter-spacing: 2%;
+    margin-bottom: 0;
+	position: relative;
+}
+.section-header.subscribe-header a{
+    text-decoration: underline;
+	font-family: 'GT Standard M Semibold', sans-serif;
+}
+.form.subscribe-form .steps-firstlady-subscribe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.7vw;
+}
+.stepping-subscribe.active {
+    background: rgba(255, 211, 28, 1);
+    color: black;
+    border-color: rgba(255, 211, 28, 1);
+}
+.stepping-subscribe:after {
+    content: "";
+    width: 1.5vw;
+    height: 1.5vw;
+    display: block;
+    position: absolute;
+    border: 0.15vw solid rgba(209, 209, 209, 1);
+    right: 1.1vw;
+    top: 0.95vw;
+    border-radius: 50%;
+}
+.stepping-subscribe.active:after {
+    border: 0.15vw solid black;
+}
+.form.subscribe-form > .section {
+    padding: 0;
+    margin-top: 2vw;
+}
+.country-selection-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: auto;
+    gap: 1vw;
+	width: 50%;
+}
+.country-selection-wrapper .country-subinput {
+    padding: 2vw 0;
+    border: 0.1vw solid #d1d1d1;
+    cursor: pointer;
+}
+.country-selection-wrapper .country-subinput span.country_name {
+    font-size: 1.8vw;
+    font-family: 'GT Canon M Narrow Bold', sans-serif;
+    letter-spacing: -2%;
+    color: black;
+    margin-bottom: 1vw;
+    display: block;
+    line-height: 1;
+}
+.country-selection-wrapper .country-subinput img.fl-contry-flag {
+    display: block;
+    width: 3vw;
+    margin: auto;
+    margin-bottom: 0vw;
+}
+.country-selection-wrapper .country-subinput span.country_price {
+    font-size: 5vw;
+    line-height: 1;
+    display: block;
+    margin-bottom: 1vw;
+    color: black;
+    font-family: 'GT Standard L Heavy', sans-serif;
+}
+.country-selection-wrapper span.sbscrption_type {
+    margin-bottom: 0.5vw;
+    display: block;
+	margin-top: 2vw;
+}
+.subscribe-country-selector h3.cntry-select-title {
+    text-align: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: 1.5vw;
+    color: black;
+    font-family: 'GT Standard L Heavy', sans-serif;
+    letter-spacing: 2%;
+}
+.country-selection-wrapper span.prmonth {
+    display: block;
+    color: black;
+    margin-bottom: 3vw;
+}
+.country-selection-wrapper span.pryear {
+    display: block;
+    color: black;
+}
+.country-selection-wrapper .country-subinput:hover, .country-selection-wrapper .country-subinput.active {
+    background: #ffd31c;
+    border-color: #ffd31c;
+}
+.stepping-subscribe[passed="1"] {
+    background: black;
+    border-color: black;
+    color: white;
+}
+.stepping-subscribe[passed="1"]:after {
+    border-color: rgba(39, 220, 70, 1);
+    background: rgba(39, 220, 70, 1);
+	content: "✓";
+    font-size: 1.1vw;
+    line-height: 1.1;
+    text-align: center;
+}
+.delivery.subscribtion-delivery-tab .select-selected, .delivery.subscribtion-delivery-tab .select-items.select-hide {
+    display: none;
+}
+.main.subscribe-main .pagination {
+    display: none;
+}
+.form.subscribe-form input.error {
+    border-color: red !important;
+}
+.subscribtion-billing-tab .card-error.error-msg {
+    color: red;
+    display: none;
+}
+.subscribtion-billing-tab .promo .small.success-msg {
+    color: green;
+    display: none;
+}
+.subscribtion-billing-tab .promo .small.error-msg {
+    color: red;
+    display: none;
+}
+.wellsbscrbe-button-nn a.button {
+    float: none !important;
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 1.3vw;
+    height: 4vw;
+    line-height: 4vw;
+    box-shadow: unset;
+    margin-top: 3vw;
+}
+.wellsbscrbe-button-nn a.button img.hvrbtn {
+    display: none;
+}
+.wellsbscrbe-button-nn a.button:hover {
+	background: #000000bf;
+}
+.wellsbscrbe-button-nn {
+    text-align: right;
+}
+.subscribe-form .ws-sb-inputs-gridding-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+	row-gap: 0.5vw;
+}
+.subscribe-form .ws-sb-inputs-gridding-1 input[type="email"] {
+    grid-column: 1 / -1;
+}
+.subscribe-form input {
+    font-size: 1vw;
+    box-shadow: unset;
+    border-radius: 5px;
+    border-color: #989898;
+    background: transparent;
+    height: 3vw;
+	text-transform: capitalize;
+}
+.form.subscribe-form .select-wrapper select {
+    background-color: transparent;
+    font-size: 1vw;
+    box-shadow: unset;
+    border-color: #ddd;
+    height: 4vw;
+	padding: 1vw;
+	margin-bottom: 1vw;
+}
+.subscribe-form input::placeholder, #wpcf7-f58-p53-o1 input::placeholder, #wpcf7-f58-p53-o1 textarea::placeholder {
+  color: #bcbcbc;
+  opacity: 1; /* Firefox */
+}
+.subscribe-form input::-ms-input-placeholder, #wpcf7-f58-p53-o1 input::-ms-input-placeholder, #wpcf7-f58-p53-o1 textarea::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #bcbcbc;
+}
+.wellsbscrbe-button-nn a.button img {
+    margin-left: 0.5vw;
+    width: 1.3vw;
+	margin-top: -3px;
+}
+#promo-toggle {
+    text-decoration: none;
+}
+#promo-toggle p {
+    color: #bcbcbc;
+	margin-bottom: 10px;
+}
+.subscribtion-billing-tab .promo input, .subscribtion-billing-tab .promo .wellsbscrbe-button-nn {
+    width: 15vw;
+}
+.promo-gridding {
+    display: inline-flex;
+    gap: 1vw;
+	width: 100%;
+    margin-bottom: 2vw;
+}
+.wellsbscrbe-button-apply-code a#check-promo {
+    margin: 0;
+    height: 3.5vw;
+    line-height: 2.6;
+}
+.form .delivery .existing-wrapper .button {
+    margin-top: 0;
+}
+.subscribe-form .ws-sb-inputs-gridding-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+	margin-bottom: 0.5vw;
+}
+.subscribe-form .ws-sb-inputs-gridding-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+}
+.subscribtion-tabs-wrapper label.container.address-toggle {
+    max-width: 100% !important;
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    font-weight: 100;
+    color: #bcbcbc;
+	margin-bottom: 1vw;
+	font-size: 1vw;
+}
+.subscribtion-tabs-wrapper label.container.address-toggle input[type="checkbox"] {
+    display: none;
+}
+.subscribtion-tabs-wrapper label.container span.checkmark {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    background: transparent;
+    border: 1px solid #d5d5d5;
+	padding: 3px;
+}
+.subscribtion-tabs-wrapper label.container span.checkmark span.checkmarkinner {
+    width: 100%;
+    display: block;
+    background: white;
+    height: 100%;
+    margin: auto;
+}
+.subscribtion-tabs-wrapper label.container.address-toggle.diffaddressactive span.checkmarkinner {
+    background: rgba(255, 211, 28, 1) !important;
+}
+.subscribtion-tabs-wrapper label.container.aggreed span.checkmarkinner {
+    background: rgba(255, 211, 28, 1) !important;
+}
+.pay-area-bottom .pay-area-bottom-right span.price {
+    color: #ffd31c;
+    font-size: 2vw;
+    font-weight: 600;
+	font-family: 'GT Standard L Heavy', sans-serif;
+}
+.pay-area-bottom .pay-area-bottom-right span.dlr {
+    font-weight: 600;
+    color: #ffd31c;
+	font-family: 'GT Standard L Heavy', sans-serif;
+}
+.pay-area-bottom .pay-area-bottom-right p.total {
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 0.9vw;
+}
+.enjoy.subscribtion-enjoy-tab {
+    text-align: center;
+}
+.enjoy.subscribtion-enjoy-tab .thnkyou-heading {
+    font-size: 5vw;
+    font-weight: 100;
+    color: black;
+    margin-bottom: 1vw;
+    font-family: 'GT Canon M Narrow Bold Italic', sans-serif;
+    opacity: 1;
+}
+.enjoy.subscribtion-enjoy-tab p.thnk-text {
+    margin: 0;
+    font-size: 1vw;
+}
+.enjoy.subscribtion-enjoy-tab p.hp-enjoy {
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-bottom: 1vw;
+    font-family: 'GT Canon M Narrow Bold Italic', sans-serif;
+    opacity: 1;
+    margin-top: 2vw;
+    border-bottom: 0.1vw solid black;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.enjoy.subscribtion-enjoy-tab .wellsbscrbe-button-nn a.button {
+    max-width: 15vw;
+    height: 4vw;
+    line-height: 4vw;
+	margin: 0;
+}
+.enjoy.subscribtion-enjoy-tab .wellsbscrbe-button-nn {
+    text-align: center;
+}
+.fl-inputs-sbscribe-sided-grid {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 2vw;
+}
+.delivery.subscribtion-delivery-tab {
+    margin-top: 2vw !important;
+}
+.form.subscribe-form input {
+    width: 100%;
+    height: 3.5vw;
+    margin-bottom: 0.5vw;
+    padding: 1vw;
+	box-shadow: unset;
+	font-size: 0.9vw;
+}
+.subscribe-form .ws-sb-inputs-gridding-1 input[type="email"], .subscribe-form .ws-sb-inputs-gridding-1 input[type="tel"] {
+    grid-column: 1 / -1;
+}
+.fl-inputs-sbscribe-sided-grid h3 {
+    color: black;
+    font-size: 1.4vw;
+    font-family: 'GT Standard L Heavy', sans-serif;
+	margin-bottom: 0.5vw;
+}
+.billing.subscribtion-billing-tab {
+    margin-top: 5vw !important;
+}
+.enjoy.subscribtion-enjoy-tab {
+    margin-top: 5vw !important;
+}
+.country-selection-wrapper.diplaybox .country-subinput.active {
+    display: block;
+}
+.country-selection-wrapper.diplaybox .country-subinput {
+    display: none;
+	background: white;
+    border: 0.1vw solid #d1d1d1;
+}
+.country-selection-wrapper.diplaybox {
+    grid-template-columns: 1fr;
+    margin-top: 1vw;
+}
+.country-selection-wrapper.sticked .country-subinput {
+    text-align: left;
+    padding: 1.5vw;
+	position: relative;
+}
+.country-selection-wrapper.sticked img.fl-contry-flag {
+    position: absolute;
+    right: 1.5vw;
+    top: 1.5vw;
+}
+.country-selection-wrapper.sticked .country-subinput span.country_name {
+    font-size: 1.7vw;
+    margin-bottom: 0vw;
+}
+.country-selection-wrapper.sticked .country-subinput span.sbscrption_type {
+    margin-top: 0;
+	margin-bottom: 0;
+}
+.country-selection-wrapper.sticked .country-subinput span.country_price {
+    font-size: 1.5vw;
+}
+.country-selection-wrapper.sticked .country-subinput span.prmonth {
+    margin-bottom: 0;
+}
+.country-selection-wrapper.sticked {
+    margin-bottom: 0vw;
+    width: 100%;
+}
+.subscribtion-tabs-wrapper {
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1.3fr;
+    gap: 2vw;
+}
+.subscribtion-tabs-wrapper .subscribtion-tab-main-fields-area {
+    order: 0;
+    grid-row: 1 / span 3;
+}
+.subscribtion-tabs-wrapper .subscribtion-tab-sidebar {
+    order: 1;
+	padding-top: 1.7vw;
+}
+.subscribtion-tabs-wrapper .wellsbscrbe-button-nn {
+    order: 2;
+    border-top: 0.1vw solid #d1d1d1;
+    padding-top: 1.1vw;
+    text-align: left;
+}
+.subscribtion-tabs-wrapper p.total {
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+	line-height: 1;
+}
+.subscribtion-tabs-wrapper .wellsbscrbe-button-nn p.total span.anl {
+    font-size: 0.8vw;
+    color: #767676;
+}
+.subscribtion-tabs-wrapper .wellsbscrbe-button-nn p.total .price {
+    font-size: 1.5vw;
+}
+.subscribtion-tabs-wrapper .wellsbscrbe-button-nn a.button {
+    margin-top: 1.1vw;
+    margin-right: 0;
+}
+.fl-card-details-inputs .input-wrapper.subscription-gridding {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1vw;
+}
+.fl-card-details-inputs .input-wrapper.subscription-gridding input:nth-child(1) {
+    grid-column: 1 / -1;
+}
+.fl-card-details-inputs .input-wrapper.subscription-gridding input:nth-child(4) {
+    grid-column: 3 / -1;
+}
+.subscribtion-tab-main-fields-area .ws-sb-inputs-gridding-2 input {
+    margin-bottom: 1vw;
+}
+.fl-inputs-sbscribe-sided-grid .input-wrapper.ws-sb-inputs-gridding-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+}
+.subscribe-review-tabs .fl-inputs-sbscribe-sided-grid {
+    padding: 1.5vw;
+    border-bottom: 0.1vw solid #d1d1d1;
+    margin-bottom: 0;
+}
+ul.extra-details-review-table {
+    margin-bottom: 0;
+    list-style: none;
+}
+ul.extra-details-review-table li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 !important;
+}
+.subscribe-review-tabs .fl-inputs-sbscribe-sided-grid h4 {
+    font-family: 'GT Standard M Semibold', sans-serif;
+    color: #afaeae;
+    font-size: 1vw;
+}
+.aggreed-termsbox input[type="checkbox"] {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0;
+    margin-right: 1vw;
+}
+.aggreed-termsbox span.checkmark {
+    display: none !important;
+}
+.aggreed-termsbox label.aggreement {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9vw;
+    line-height: 1.3;
+}
+.subscribtion-tab-sidebar .termsbx {
+    padding: 1.5vw;
+    background: #ffd31c52;
+    margin-top: -0.7vw;
+}
+.subscribtion-tab-sidebar .termsbx h3 {
+    color: black;
+    font-size: 1.2vw;
+}
+@media only screen and (max-width: 980px){
+	.subscribtion-tabs-wrapper {
+		grid-template-columns: 1fr;
+		max-width: 55%;
+	}
+	.delivery .subscribtion-tabs-wrapper .subscribtion-tab-main-fields-area {
+		order: 1;
+		grid-row: auto;
+	}
+	.delivery .subscribtion-tabs-wrapper .subscribtion-tab-sidebar {
+		order: 0;
+	}
+}
+@media only screen and (max-width: 768px){
+	.subscribtion-tabs-wrapper {
+		grid-template-columns: 1fr;
+		max-width: 100%;
+		gap: 20px;
+	}
+}
+.subscribtion-tab-sidebar.is-sticky {
+    position: sticky;
+    top: 5vw;
+    margin-bottom: 22vw;
+}
+.wellsbscrbe-button-nn.is-sticky {
+    position: sticky;
+    top: 21vw;
+    transition: 1s;
+    margin-top: -20vw;
+}
+.subscribe-country-selector .wellsbscrbe-button-nn {
+    width: 50%;
+    margin: auto;
+}
+@media only screen and (max-width: 768px){
+	.subscribe-country-selector .wellsbscrbe-button-nn {
+		width: 100%;
+	}
+	.wellsbscrbe-button-apply-code a#check-promo {
+		font-size: 13px;
+		height: 40px;
+		line-height: 3;
+	}
+}
